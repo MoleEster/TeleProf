@@ -1,0 +1,22 @@
+﻿CREATE TABLE [dbo].[Cities]
+    (
+    [Id]       INT IDENTITY (1, 1) NOT NULL,
+    [c_name]   NVARCHAR (MAX) NULL,
+    );
+
+INSERT INTO Cities (c_name)  
+VALUES ("Москва");
+INSERT INTO Cities (c_name)  
+VALUES ("Санкт-Петербург");
+INSERT INTO Cities (c_name)  
+VALUES ("Самара");
+INSERT INTO Cities (c_name)  
+VALUES ("Рязань");
+INSERT INTO Cities (c_name)  
+VALUES ("Владивосток");
+
+
+
+SELECT * FROM Cities
+UNION ALL
+SELECT * FROM Cities WHERE Id>1
